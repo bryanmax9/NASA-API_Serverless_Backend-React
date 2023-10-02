@@ -1,0 +1,53 @@
+Set-Up:
+run in the terminal:
+
+"npx create-react-app nasa-apod-frontend"
+
+"cd nasa-apod-frontend"
+
+Go to the root folder and run:
+
+"mkdir netlify"
+
+"cd netlify"
+
+"mkdir functions"
+
+"cd functions"
+
+"npm init -y"
+
+"npm install axios"
+
+Return to the root folder again:
+
+"npm install -g netlify-cli"
+
+"npm install axios"
+
+
+-------------------------------------------------------
+RUN PROJECT
+In the root directory run:
+
+"cd nasa-apod-frontend"
+
+(The build has to be done everytime you make changes in React!)
+"npm run build"
+
+Return to the root directory use command:
+
+"npx netlify dev"
+
+
+--------------------------------------------------------
+Deploying
+
+First login to out Netlify account using the terminal:
+
+"netlify login"
+
+Then we will set up Continuous deployment:
+
+"netlify init "
+
