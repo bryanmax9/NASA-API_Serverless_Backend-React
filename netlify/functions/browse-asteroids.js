@@ -1,11 +1,11 @@
+// file: browse-asteroids.js
 const axios = require("axios");
 
-const NASA_ENDPOINT =
-  "https://api.nasa.gov/planetary/apod?api_key=Jbm6MlEtCMeow8EedEFMEcfoXEfd9YmyvhbYdZ2b";
-
 exports.handler = async function (event, context) {
+  const API_ENDPOINT = `https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=Jbm6MlEtCMeow8EedEFMEcfoXEfd9YmyvhbYdZ2b`;
+
   try {
-    const response = await axios.get(NASA_ENDPOINT);
+    const response = await axios.get(API_ENDPOINT);
     return {
       statusCode: 200,
       body: JSON.stringify(response.data),
@@ -13,7 +13,7 @@ exports.handler = async function (event, context) {
   } catch (error) {
     return {
       statusCode: 500,
-      body: "Error fetching APOD data",
+      body: "Error fetching asteroid data",
     };
   }
 };
